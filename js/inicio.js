@@ -1,4 +1,4 @@
-localStorage['serviceURL'] = "http://apps.sbiweb.com/HOTFEST/";
+
 
 var selectedValue2 = localStorage.nameciudad;
 
@@ -142,11 +142,10 @@ function calendarIni() {
 function cambioCiudad() {
    
      $('#divload').show();
-     
+
         localStorage['nameciudad'] = $('#ciudades').val();
         var selectedValue2 = localStorage.nameciudad;
-        
-
+    
         console.log(selectedValue2 + 'ciuudad');
         //$('.bCiudad').removeClass("seleccion");
        // $('.escoge').remove();
@@ -160,7 +159,7 @@ function cambioCiudad() {
 
 
         //localStorage['nameciudad'] = selectedValue;
-
+        localStorage['serviceURL'] = "http://apps.sbiweb.com/HOTFEST/";
         var serviceURL = localStorage['serviceURL'];
         $.getJSON(serviceURL + 'EventoJsonServlet.json?idCiudad='+ selectedValue2 +'&idCategoria=todas&repite=SI', function(data) {
          
@@ -180,9 +179,7 @@ function cambioCiudad() {
        //     setTimeout(getEvents, 100);
             
         });
-        
-        
-        
+
 
         mescache();
         
@@ -191,11 +188,6 @@ function cambioCiudad() {
          
         
         //$('#eventos').val(0);
-
-        
-    
-
-        
         //setTimeout( dates, 100);     
         $('#divload').fadeOut(); 
 
