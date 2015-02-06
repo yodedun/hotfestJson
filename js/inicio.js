@@ -32,7 +32,7 @@ $("#eventos").change(function(){
 function categoriasF() {
     $("option.addcat").remove()
     var serviceURL = localStorage['serviceURL'];
-    $.getJSON(serviceURL + 'CategoriaJsonServlet.json', function(data) {
+    $.getJSON('http://apps.sbiweb.com/HOTFEST/CategoriaJsonServlet.json', function(data) {
        
         categorias = data.categorias ;
         $.each(categorias, function(index, categoria) {
@@ -47,7 +47,7 @@ function categoriasF() {
 function ciudadesF() {
     $("option.addCity").remove();
     var serviceURL = localStorage['serviceURL'];
-    $.getJSON(serviceURL + 'CiudadJsonServlet.json', function(data) {
+    $.getJSON('http://apps.sbiweb.com/HOTFEST/CiudadJsonServlet.json', function(data) {
         
         ciudades = data.ciudadesSelect;
         $.each(ciudades, function(index, ciudad) {
@@ -157,9 +157,9 @@ function cambioCiudad() {
                            
         //localStorage.removeItem('nameciudad');
         //localStorage['nameciudad'] = selectedValue;
-        localStorage['serviceURL'] = "http://apps.sbiweb.com/HOTFEST/";
+        
         var serviceURL = localStorage['serviceURL'];
-        $.getJSON(serviceURL + 'EventoJsonServlet.json?idCiudad='+ selectedValue2 +'&idCategoria=todas&repite=SI', function(data) {
+        $.getJSON('http://apps.sbiweb.com/HOTFEST/EventoJsonServlet.json?idCiudad='+ selectedValue2 +'&idCategoria=todas&repite=SI', function(data) {
          
                 events = data.events;
                 console.log(events);
