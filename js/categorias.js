@@ -14,7 +14,7 @@ $(document).ajaxError(function(event, request, settings) {
 
 function getCategorias(){
     $('#divload').show();
-    $.getJSON(serviceURL + 'CategoriaJsonServlet.json', function(data) {
+    $.getJSON('http://apps.sbiweb.com/HOTFEST/CategoriaJsonServlet.json', function(data) {
         $('#divload').fadeOut(); 
         $('#categoriasSection').empty();
         categorias = data.categorias ;

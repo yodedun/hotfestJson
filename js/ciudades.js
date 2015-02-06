@@ -13,7 +13,7 @@ $(document).ajaxError(function(event, request, settings) {
 
 function getCiudades(){
     $('#divload').show();
-    $.getJSON(serviceURL + 'CiudadJsonServlet.json', function(data) {
+    $.getJSON('http://apps.sbiweb.com/HOTFEST/CiudadJsonServlet.json', function(data) {
         $('#divload').fadeOut(); 
         $('#categoriasSection').empty();
         ciudades = data.ciudadesSelect;
