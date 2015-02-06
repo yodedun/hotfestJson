@@ -156,8 +156,6 @@ function cambioCiudad() {
         $.jMonthCalendar.ReplaceEventCollection([]);//reemplazo eventos
                            
         //localStorage.removeItem('nameciudad');
-
-
         //localStorage['nameciudad'] = selectedValue;
         localStorage['serviceURL'] = "http://apps.sbiweb.com/HOTFEST/";
         var serviceURL = localStorage['serviceURL'];
