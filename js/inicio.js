@@ -1,4 +1,4 @@
- 
+localStorage['serviceURL'] = "http://apps.sbiweb.com/HOTFEST/";
 
 var selectedValue2 = localStorage.nameciudad;
 
@@ -116,6 +116,7 @@ function calendarIni() {
         $('#addtour5').show();  
         $('.escoge').show();        
         selectedValue = '0';
+        $('#divload').hide();
         $('.bCiudad').addClass("seleccion");
     }
     else{ 
