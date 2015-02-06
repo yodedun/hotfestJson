@@ -29,7 +29,7 @@
         <meta name="MobileOptimized" content="320">
         <link rel="stylesheet" type="text/css" href="css/core.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="js/slick.css" />
+        <!--<link rel="stylesheet" type="text/css" href="js/slick.css" />-->
         <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
 
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
@@ -40,9 +40,9 @@
          <script src="js/jquery.touchSwipe.js"></script>
         <script src="js/jMonthCalendar.js" type="text/javascript"></script>
         <script src="js/calendar.js" type="text/javascript"></script>
-        <script src="js/slick.js"></script>
+        <!--<script src="js/slick.js"></script>
 
-        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>-->
 
         <script>(function(){var a;if(navigator.platform==="iPad"){a=window.orientation!==90||window.orientation===-90?"images/startup-tablet-landscape.png":"images/startup-tablet-portrait.png"}else{a=window.devicePixelRatio===2?"images/startup-retina.png":"images/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+a+'"/>')})()</script>
 
@@ -55,10 +55,40 @@
                 app.initialize();  
                 $('#divload').show();
 
-                if(localStorage.getItem('nameciudad')== null ){ 
+                if(localStorage.getItem('tour')== null ){ 
                         window.location="tour.html";
                     } 
-                calendarIni()    
+
+                 function calendario(callbackPaso1, callbackPaso2, callbackTermino){
+                        //algo aca
+                        callbackPaso1('paso 1');
+                     
+                        //sigo... algo aca
+                        callbackPaso2('paso 2');
+                     
+                        //sigo ... y termino
+                        callbackTermino('terminó');
+                    }
+                     
+                    function paso1(quePaso){
+                        ciudadesF();
+                        console.log('uno');
+                    }
+                     
+                    function paso2(quePaso){
+                         categoriasF();
+                         console.log('dos');
+                    }
+                     
+                    function termino(queHizo){
+                         calendarIni();
+                         console.log('tres');
+                    }
+ 
+                    calendario(paso1, paso2, termino);   
+                                    
+                                    
+                                    
 
 
 

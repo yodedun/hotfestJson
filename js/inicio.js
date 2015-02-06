@@ -1,8 +1,8 @@
 
-
-var selectedValue2 = localStorage.nameciudad;
-
 $.jMonthCalendar.ChangeMonth(new Date()) ;
+
+
+
 
 
 $('#deviceProperties').click(function() {
@@ -35,10 +35,12 @@ function categoriasF() {
     $.getJSON('http://apps.sbiweb.com/HOTFEST/CategoriaJsonServlet.json', function(data) {
        
         categorias = data.categorias ;
+        
+
         $.each(categorias, function(index, categoria) {
             $('#eventos').append('<option class="addcat" value="'+ categoria.CatId +'">'+ categoria.Nombre +'</option>');
         });
-        
+
     });
 
 
@@ -54,6 +56,8 @@ function ciudadesF() {
             $('#ciudades').append('<option class="addCity" value="'+ ciudad.CiudadId +'">'+ ciudad.Nombre +'</option>');
               
         });
+
+
         
     });
     
@@ -97,18 +101,18 @@ function mescache() {
 
 
 function ciudadcache() {
-
-    $('#ciudades').val(selectedValue2).change();
+    //cacheCity = localStorage.getItem('nameciudad');
+    $('#ciudades').val(localStorage.getItem('nameciudad')).change();
         
 };
 
 function calendarIni() {
-    categoriasF();
-    ciudadesF();
+   
+
     
+    selectedValue2 = localStorage.getItem('nameciudad');
 
     // si no hay ciudad seleccionada
-    //selectedValue = localStorage.nameciudad;
     console.log(selectedValue2 +'dos');
 
     if(selectedValue2 == null ){ 
@@ -120,7 +124,7 @@ function calendarIni() {
         $('.bCiudad').addClass("seleccion");
     }
     else{ 
-        if(selectedValue2 === '0' ){ 
+        if(selectedValue2 == '0' ){ 
             $('#addtour5').show();    
             $('.escoge').show();        
             selectedValue = '0';
@@ -143,8 +147,11 @@ function cambioCiudad() {
    
      $('#divload').show();
 
+    
+        
+
         localStorage['nameciudad'] = $('#ciudades').val();
-        var selectedValue2 = localStorage.nameciudad;
+        var selectedValue2 = localStorage.getItem('nameciudad');
     
         console.log(selectedValue2 + 'ciuudad');
         //$('.bCiudad').removeClass("seleccion");
@@ -163,7 +170,8 @@ function cambioCiudad() {
          
                 events = data.events;
                 console.log(events);
-                $.jMonthCalendar.AddEvents(events);
+
+                $.jMonthCalendar.AddEvents(events);//asgna fechas
 
                 setTimeout(function(){
                     //$('#eventos').val(0).change();
@@ -210,7 +218,7 @@ function categoriacache() {
     }
 
     else{ 
-        if(localStorage.getItem('namecategoria')=== '0' ){   
+        if(localStorage.getItem('namecategoria') == '0' ){   
             
             selectedValueE = '0';
             eventosCategoria = JSON.stringify(events);
