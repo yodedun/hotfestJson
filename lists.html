@@ -1,0 +1,156 @@
+<!--
+	jQuery Mobile Boilerplate
+	/snippets/lists.html
+-->
+<!doctype html>
+<html>
+<head>
+	<title> jQuery Mobile Boilerplate - Listviews</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- jQuery Mobile CSS bits -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />
+
+	<!-- Custom css -->
+	<link rel="stylesheet" href="css/custom.css" />
+
+	<!-- Javascript includes -->
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/mobileinit.js"></script>
+	<script src="js/jquery.mobile-1.4.0.js"></script>
+	<script src="js/application.js"></script>
+</head>
+<body>
+	<div data-role="page">
+
+		<div data-role="header">
+			<a href="index.html" data-icon="home">Home</a>
+			<h1>Listsviews</h1>
+		</div>
+
+		<div data-role="content">
+
+
+
+
+
+<h2>Basic Listview</h2>
+
+<ul data-role="listview" data-inset="true">
+	<li>Robert Heinlein</li>
+	<li>SM Stirling</li>
+	<li>Julian May</li>
+	<li>JRR Tolkien</li>
+	<li>Piers Anthony</li>
+</ul>
+
+<h2>Linked List</h2>
+
+<ul data-role="listview" data-inset="true">
+	<li><a href="../index.html">Robert Heinlein</a></li>
+	<li><a href="../index.html">SM Stirling</a></li>
+	<li><a href="../index.html">Julian May</a></li>
+</ul>
+
+<h2>Nested  Lists</h2>
+
+<p>
+	Nested listviews were deprecated in jQuery Mobile 1.3 and were removed in 1.4. For those wishing to use the 1.3 behaivor there is a plugin available at <a href="https://github.com/arschmitz/jquery-mobile-nestedlists/" class="ui-link">https://github.com/arschmitz/jquery-mobile-nestedlists/</a>. With this plugin you can just drop it in after the jQuery mobile script to be able to use jQuery mobile 1.3 style nested listviews. You can use the same markup all you need to do is drop in the script.
+</p>
+
+<h2>Numbered List</h2>
+
+<ol data-role="listview" data-inset="true">
+	<li><a href="index.html">Robert Heinlein</a></li>
+	<li><a href="index.html">SM Stirling</a></li>
+	<li><a href="index.html">Julian May</a></li>
+</ol>
+
+<h2>Split-Button List</h2>
+
+<ul data-role="listview" data-split-icon="gear" data-split-theme="d" data-inset="true">
+	<li><a href="index.html">
+		<img src="images/broken-bells.jpg" />
+		<h3>Broken Bells</h3>
+		<p>Broken Bells</p>
+		</a><a href="lists-split-purchase.html" data-rel="dialog" data-transition="slideup">Purchase album
+	</a></li>
+	<li><a href="index.html">
+
+		<img src="images/hot-chip.jpg" />
+		<h3>Warning</h3>
+		<p>Hot Chip</p>
+
+	</a><a href="lists-split-purchase.html" data-rel="dialog" data-transition="slideup">Purchase album
+	</a></li>
+	<li><a href="index.html">
+		<img src="images/phoenix.jpg" />
+		<h3>Wolfgang Amadeus Phoenix</h3>
+		<p>Phoenix</p>
+		</a><a href="lists-split-purchase.html" data-rel="dialog" data-transition="slideup">Purchase album
+	</a></li>
+</ul>
+
+<h2>List Dividers</h2>
+
+<ul data-role="listview" data-inset="true">
+	<li>Men</li>
+	<li>Robert Heinlein</li>
+	<li>SM Stirling</li>
+	<li>JRR Tolkien</li>
+	<li>Piers Anthony</li>
+	<li>Women</li>
+	<li>Julian May</li>
+</ul>
+
+<h2>Search Filter</h2>
+
+<ul data-role="listview" data-inset="true" data-filter="true">
+	<li>Men</li>
+	<li>Robert Heinlein</li>
+	<li>SM Stirling</li>
+	<li>JRR Tolkien</li>
+	<li>Piers Anthony</li>
+	<li>Women</li>
+	<li>Julian May</li>
+</ul>
+
+<h2>Count Bubbles</h2>
+
+<ul data-role="listview" data-inset="true" data-filter="true">
+	<li>
+		Robert Heinlein
+		<span class="ui-li-count">32</span>
+	</li>
+	<li>
+		SM Stirling
+		<span class="ui-li-count">15</span>
+	</li>
+	<li>
+		JRR Tolkien
+		<span class="ui-li-count">9</span>
+	</li>
+	<li>
+		Piers Anthony
+		<span class="ui-li-count">42</span>
+	</li>
+	<li>
+		Julian May
+		<span class="ui-li-count">27</span>
+	</li>
+</ul>
+
+
+
+
+		</div>
+
+		<div data-role="footer">
+			<p>&copy; 2012 - jQuery Mobile Boilerplate</p>
+		</div>
+
+	</div>
+</body>
+</html>

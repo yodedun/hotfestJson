@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <link rel="stylesheet" type="text/css" href="css/core.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="js/slick.css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/mobileinit.js"></script>
+        <script src="js/ios-orientationchange-fix.min.js"></script>
+        <script src="js/jquery.mobile-1.4.0.js"></script>
+         <script src="js/jquery.touchSwipe.js"></script>
+        <script src="js/application.js"></script>
+
+         <script type="text/javascript" src="cordova.js"></script>
+
+        <script>(function(){var a;if(navigator.platform==="iPad"){a=window.orientation!==90||window.orientation===-90?"images/startup-tablet-landscape.png":"images/startup-tablet-portrait.png"}else{a=window.devicePixelRatio===2?"images/startup-retina.png":"images/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+a+'"/>')})()</script>
+
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+
+        <script type="text/javascript">
+               
+            $( document ).ready(function() {
+            
+
+                app.initialize();  
+
+                
+
+            });
+
+
+        </script>
+
+        <title>HOTFEST</title>
+    </head>
+    <body>
+        <div data-role="page" id="ciudades" class="mypage">
+            <div id="divload" data-loading="white"></div>
+
+            <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="overlay">
+                <div class="menupanel">
+                    <ul class="listPanel">
+                        <li> <a href="#" data-ajax="false">HOTFEST
+                            </a></li>
+                        <li> <a href="index.html" data-ajax="false">Calendario
+                            <i class="ui-btn-right fa fa-calendar"></i></a></li>
+                        <li><a href="categorias.html" data-ajax="false">Categorias
+                            <i class="ui-btn-right fa fa-tags"></i>
+                    </a></li>
+                        <li><a href="ciudades.html" data-ajax="false">Ciudades
+                            <i class="ui-btn-right fa fa-map-marker"></i>
+                    </a></li>
+                        <li><a href="tour.html" data-ajax="false">Tour
+                            <i class="ui-btn-right fa fa-book"></i>
+                    </a></li>
+                    </ul>
+                </div>
+            </div>
+
+             <div data-role="header" data-position="fixed">
+                <a href="javascript:history.back()" class="ui-nodisc-icon" data-ajax="false" data-iconpos="notext" data-role="button" data-icon="carat-l" title="Home">Home</a>
+                <h1>Ciudades</h1>
+                <a class="ui-btn-right" data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+            </div>
+
+
+            <div data-role="content">
+                <div id="ciudadesSection">
+                    <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+                    </ul>
+                    
+                   
+                    
+                    
+          
+                  </div> 
+
+               
+            </div>
+
+            <!--<div data-role="footer">
+                <p>&copy; 2015 - Jescudero</p>
+            </div>-->
+
+
+        </div>
+
+           
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/ciudades.js"></script>
+
+    </body>
+</html>

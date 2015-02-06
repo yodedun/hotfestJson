@@ -1,0 +1,162 @@
+﻿
+        
+#jMonthCalendar {
+width: 93% !important;
+height: 80% !important;
+display: block;
+
+}
+.MonthlyCalendar .MonthNavigation { border:none;
+clear: both;
+height: 39px;
+padding: 5px 10px 0 10px; }
+.MonthlyCalendar .MonthNavPrev, .MonthlyCalendar .MonthNavNext, .MonthlyCalendar .TodayLink { width:14%; float:left; }
+.MonthlyCalendar .YearNavNext, .MonthlyCalendar .YearNavPrev { width:10%; float:right; }
+.MonthlyCalendar .MonthName { width:100%; text-align:center; font-weight:bold; float:left; }
+
+
+.MonthlyCalendar { height:100%; width:100%;  border-collapse:collapse; }
+.MonthlyCalendar #CalendarHead { width:100%; background:#fff none repeat scroll 0 0; }
+.MonthlyCalendar #CalendarHead .DateHeader { width:14%; text-align:center; font-size: 12px;}
+
+.MonthlyCalendar #CalendarBody { }
+.DateBox {
+vertical-align: top;
+border: none;
+position: relative;
+margin: 6px 0px;
+padding: 3% 0px;
+}
+
+
+
+#CalendarBody .Inactive, #CalendarBody .Weekend {  }
+
+
+#jMonthCalendar .Event {
+font-size: 12px;
+background-color: rgba(192, 208, 255, 0);
+margin-bottom: 1px;
+border:none;
+cursor: pointer;
+display: block;
+position: absolute;
+top: 0px;
+width: 100%;
+height: 100%;
+
+
+}
+.DateLabel.festivo{
+color: #FF6969;	
+text-shadow: none !important;
+
+}
+.DateLabel.especial{
+
+font-weight: normal;
+}
+
+#jMonthCalendar .festivo .Event {
+border-color: rgba(255, 255, 255, 0);
+
+}
+
+#jMonthCalendar .especial .Event {
+border-color: rgba(255, 255, 255, 0);
+}
+
+
+#jMonthCalendar  table tr{
+	height: inherit !important;
+}
+
+.Event a { text-decoration:none; color:#000; }
+.Event a:hover { text-decoration:underline; }
+
+.MonthlyCalendar .MonthNavPrev{
+	float: left;
+	position: absolute;
+	left: 10px;
+}
+
+.MonthlyCalendar .MonthNavNext{
+	position: absolute;
+	right: 14px;
+	width: inherit;
+
+}
+
+ .MonthlyCalendar .TodayLink{
+ 	position: absolute;
+left: 56%;
+display: none;
+ }
+
+ #CalendarBody .Inactive .DateLabel {
+color: rgba(0, 0, 0, 0.18);
+}
+
+#CalendarBody .Inactive.Weekend .DateLabel{
+color:	rgba(255, 105, 105, 0.18);
+}
+#CalendarBody .Weekend .DateLabel{
+color:	#FF6969;
+}
+
+
+.Today .DateLabel:before {
+content: " ";
+
+border-bottom: 2px solid rgba(255, 105, 105, 1);
+position: absolute;
+bottom: 0px;
+right: 0px;
+width: 100%;
+z-index: 23;
+}
+
+.Today .DateLabel .Event{
+	
+}
+
+.DateLabel {
+padding: 11px 11px;
+background: none;
+text-align: right;
+position: relative;
+border-radius: 35px;
+margin: auto;
+text-align: center;
+color: #000;
+border-style: solid;
+border-width: 1px;
+border-radius: 35px;
+border-color: #FFF;
+}
+
+.DateLabel a { 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	cursor:pointer; 
+	text-decoration:none; 
+	line-height:16px;
+}
+
+.multievento {
+border-top-color: rgb(20, 74, 133)!important;
+border-right-color: rgb(223, 217, 72)!important;
+border-bottom-color: rgb(36, 128, 36) !important;
+border-left-color: rgb(213, 4, 96)!important;
+border: 1px solid;
+}
+
+
+
+#jMonthCalendar .Meeting { background: none;}
+#jMonthCalendar .Birthday { background: none;}
+#jMonthCalendar #Event_3 { background: none; }
+
