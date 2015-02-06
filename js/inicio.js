@@ -195,7 +195,8 @@ function cambioCiudad() {
     
 
         
-        //setTimeout( dates, 100);      
+        //setTimeout( dates, 100);     
+        $('#divload').fadeOut(); 
 
 }  
 
