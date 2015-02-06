@@ -35,7 +35,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        localStorage['serviceURL'] = "http://apps.sbiweb.com/HOTFEST/";
+        
         StatusBar.overlaysWebView(false);
          var element = document.getElementById('deviceProperties');
         element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
@@ -62,7 +62,7 @@ var app = {
 };
 
 app.initialize();
-
+localStorage['serviceURL'] = "http://apps.sbiweb.com/HOTFEST/";
 
                 
 

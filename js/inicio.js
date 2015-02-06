@@ -142,6 +142,7 @@ function calendarIni() {
 function cambioCiudad() {
    
      $('#divload').show();
+     
         localStorage['nameciudad'] = $('#ciudades').val();
         var selectedValue2 = localStorage.nameciudad;
         
